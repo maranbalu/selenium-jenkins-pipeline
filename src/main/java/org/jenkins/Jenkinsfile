@@ -16,7 +16,7 @@ pipeline {
                          checkoutCode()
                          bat '.\\gradlew test'
 
-                         testNG reportFilenamePattern: '**/TEST-tests.FirstTest.xml'
+                         testNG reportFilenamePattern: '**/testng-results.xml'
                     }
                 }
             }
