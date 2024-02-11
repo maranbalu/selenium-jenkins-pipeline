@@ -15,9 +15,13 @@ pipeline {
                     dir ('selenium-code-checkout'){
                          print "Current directory is: " + pwd()
                          checkoutCode()
+                         bat '.\\gradlew test'
                     }
                 }
             }
         }
     }
+}
+always{
+    cleanWs()
 }
