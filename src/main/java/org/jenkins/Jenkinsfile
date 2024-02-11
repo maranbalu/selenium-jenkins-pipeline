@@ -11,7 +11,7 @@ pipeline {
             steps {
                 script{
                     print "Current directory is: " + pwd()
-                    bat 'mkdir selenium-code-checkout'
+                    //bat 'mkdir selenium-code-checkout'
                     dir ('selenium-code-checkout'){
                          print "Current directory is: " + pwd()
                          checkoutCode()
