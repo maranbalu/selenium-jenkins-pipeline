@@ -1,0 +1,23 @@
+void checkoutCode(){
+    checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: '2dd6ef31-27f2-400c-b705-31cca1e46433', url: 'https://github.com/maranbalu/selenium-my-project.git']])
+}
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Code Checkout') {
+            steps {
+                script{
+
+                    print "Current directory is: " + pwd()
+                    bat 'mkdir selenium-code-checkout'
+                    dir ('selenium-code-checkout'){
+                         print "Current directory is: " + pwd()
+                         checkoutCode()
+                    }
+                }
+            }
+        }
+    }
+}
