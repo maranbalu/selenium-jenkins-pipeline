@@ -9,7 +9,6 @@ pipeline {
         stage('Code Checkout') {
             steps {
                 script{
-
                     print "Current directory is: " + pwd()
                     bat 'mkdir selenium-code-checkout'
                     dir ('selenium-code-checkout'){
