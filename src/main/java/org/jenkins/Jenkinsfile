@@ -2,7 +2,6 @@ void checkoutCode(){
     checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: '2dd6ef31-27f2-400c-b705-31cca1e46433', url: 'https://github.com/maranbalu/selenium-my-project.git']])
 }
 
-
 pipeline {
     agent any
 
