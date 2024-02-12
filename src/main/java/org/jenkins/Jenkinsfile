@@ -15,7 +15,7 @@ pipeline {
                          print "Current directory is: " + pwd()
                          checkoutCode()
                          bat '.\\gradlew test'
-                         step([$class: 'Publisher', reportFilenamePattern: '**/testng-results.xml'])
+                         step([$class: 'Publisher', reportFilenamePattern: '**/TEST-tests.FirstTest.xml'])
                          //testNG reportFilenamePattern: '**/testng-results.xml'
                     }
                 }
